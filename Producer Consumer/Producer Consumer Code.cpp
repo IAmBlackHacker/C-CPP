@@ -42,7 +42,7 @@ void* consumer(void *ptr) {
         q.pop();
     }
     pthread_mutex_unlock(&the_mutex);
-    Sleep(100); //replace this with sleep(int) for Linux
+    //Sleep(100); //replace this with sleep(int) for Linux
     if(finished && q.empty())break;
   }
   pthread_exit(0);
