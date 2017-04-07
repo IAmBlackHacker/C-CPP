@@ -12,6 +12,14 @@ pthread_mutex_t the_mutex;
 queue<int> q;
 bool finished=false;
 
+/*defination*/
+int pthread_create(pthread_t *th, const pthread_attr_t *attr, void *(* func)(void *), void *arg);
+int pthread_join(pthread_t t, void **res);
+int pthread_mutex_lock(pthread_mutex_t *m);
+int pthread_mutex_unlock(pthread_mutex_t *m);
+int pthread_mutex_init(pthread_mutex_t *m, const pthread_mutexattr_t *a);
+int pthread_mutex_destroy(pthread_mutex_t *m);
+
 void* producer(void *ptr) {
     for (int i = 1; i <= MAX; i++) {
         pthread_mutex_lock(&the_mutex);
