@@ -1,3 +1,5 @@
+//command for running in Linux
+//g++ Producer\ Consumer\ Code.cpp -lpthread
 #include<iostream>
 #include<queue>
 #include<pthread.h>
