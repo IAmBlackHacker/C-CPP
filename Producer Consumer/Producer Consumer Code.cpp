@@ -2,7 +2,8 @@
 #include<queue>
 #include<pthread.h>
 #include<stdlib.h>
-#include<windows.h>
+#include<unistd.h> //for sleep(int) run in both Windows and Linux
+#include<windows.h> //for Sleep(int) only for Windows(comment this in Linux)
 #define MAX 1000
 using namespace std;
 
@@ -39,7 +40,7 @@ void* consumer(void *ptr) {
         q.pop();
     }
     pthread_mutex_unlock(&the_mutex);
-    Sleep(100);
+    Sleep(100); //replace this with sleep(int) for Linux
     if(finished && q.empty())break;
   }
   pthread_exit(0);
