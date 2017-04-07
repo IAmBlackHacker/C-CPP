@@ -4,8 +4,8 @@
 #include<queue>
 #include<pthread.h>
 #include<stdlib.h>
-#include<unistd.h> //for sleep(int) run in both Windows and Linux
-#include<windows.h> //for Sleep(int) only for Windows(comment this in Linux)
+#include<unistd.h> //for sleep(int s) run in both Windows and Linux
+#include<windows.h> //for Sleep(int ms) only for Windows(comment this in Linux)
 #define MAX 1000
 using namespace std;
 
